@@ -41,8 +41,7 @@ def main():
     st.write(mortality_df)
 
     # Extract feature columns from the dataframe
-    feature_columns = ["b5",
-                       "rural",
+    feature_columns = ["rural",
                        "region_mindanao",
                        "region_visayas",
                        "householdhead_female",
