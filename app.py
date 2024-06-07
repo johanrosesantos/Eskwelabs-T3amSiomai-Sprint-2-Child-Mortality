@@ -160,7 +160,7 @@ def main():
             globals()[element] = 0
 
     # Prepare new input for prediction
-    new_data = np.array([["rural,
+    new_data = np.array([["rural",
                          "region_mindanao",
                          "region_visayas",
                          "householdhead_female",
