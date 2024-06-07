@@ -165,7 +165,7 @@ def main():
         "Open Defecation": "toilet_open_defecation",
         "I don't know": "toilet_unknown"}
     # Display select box for selection
-    selected_toilet = st.selectbox("What kind of toilet do you use?", ["Unimproved Toilet Facility", "Unimproved Toilet Facility", "Open Defecation", "I don't know"], index=0)
+    selected_toilet = st.selectbox("What kind of toilet do you use?", ["Improved Toilet Facility", "Unimproved Toilet Facility", "Open Defecation", "I don't know"], index=0)
     # Assign values based on selection
     for toilet, element in toilet_mapping.items():
         if selected_toilet == toilet:
@@ -238,7 +238,7 @@ def main():
     total_children_born = st.number_input("How many children have you given birth to?", min_value=1, max_value=50, value=1, step=1)
 
     # Age at first birth
-    age_first_birth = st.number_input("At what age did you have your first child?", min_value=1, max_value=50, value=1, step=1)
+    age_first_birth = st.number_input("At what age did you have your first child?", min_value=1, max_value=50, value=18, step=1)
 
     # Total births in 5 years
     total_births_last5years = st.number_input("How many times have you given birth in the last 5 years?", min_value=1, max_value=10, value=1, step=1)
@@ -377,7 +377,7 @@ def main():
             predictions = model.predict(full_data)
             new_prediction = predictions[-1]
             risk_status = "at risk" if new_prediction == 1 else "not at risk"
-            st.markdown(f"Prediction result: Your child is **{risk_status}** of child mortality.")
+            st.markdown(f"<h2>Your child is <b>{risk_status}</b> of child mortality.</h2>", unsafe_allow_html=True)
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
 
