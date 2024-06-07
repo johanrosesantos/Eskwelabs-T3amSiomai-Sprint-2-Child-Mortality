@@ -232,7 +232,7 @@ def main():
     # Working
     work_mapping = {"No": 0, "Yes": 1}
     selected_work = st.selectbox("Are you currently employed?", ["No", "Yes"], index=0)
-    mother_working = workl_mapping[selected_work]
+    mother_working = work_mapping[selected_work]
 
     # Total Children Born
     total_children_born = st.number_input("How many children have you given birth to?", min_value=1, max_value=50, value=1, step=1)
