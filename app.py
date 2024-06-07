@@ -31,7 +31,7 @@ def main():
     full_data = np.vstack([iris.data, new_data])
 
     # Predict the species
-    if st.button("Predict"):
+    if st.button("Predict Species"):
         predictions = model.predict(full_data)
         new_prediction = predictions[-1]
         species = iris.target_names[new_prediction]
