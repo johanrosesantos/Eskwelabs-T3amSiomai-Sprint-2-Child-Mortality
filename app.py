@@ -221,7 +221,7 @@ def main():
         "Highschool": "mothereduc_secondary",
         "College or Higher": "mothereduc_higher"}
     # Display select box for selection
-    educ_mage = st.selectbox("What is the mother's highest educational attainment?", ["None", "Elementary", "Highschool", "College or Higher"], index=1)
+    selected_educ = st.selectbox("What is the mother's highest educational attainment?", ["None", "Elementary", "Highschool", "College or Higher"], index=1)
     # Assign values based on selection
     for educ, element in educ_mapping.items():
         if selected_educ == educ:
