@@ -99,10 +99,6 @@ def main():
     sex_mapping = {"Male": 0, "Female": 1}
     selected_sex = st.selectbox("Select your sex", ["Male", "Female"])
     sex = sex_mapping[selected_sex]
-
-    region_mapping = {"Male": 0, "Female": 1}
-    selected_region = st.selectbox("Select your sex", ["Male", "Female"])
-    sex = sex_mapping[selected_sex]
     
     ### Contraceptive
     contra_mapping = {
