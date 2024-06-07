@@ -21,7 +21,7 @@ def main():
         st.error(f"The preprocessed_dhs_dummies.csv file was not found at {mortality_csv_path}. Please make sure it is in the correct directory.")
         return
 
-    # Construct the path to the adaboost.pkl file
+     # Construct the path to the adaboost.pkl file
     model_path = os.path.join(current_dir, "adaboost.pkl")
 
     # Load the model from pickle file
@@ -31,10 +31,13 @@ def main():
     except FileNotFoundError:
         st.error(f"The adaboost.pkl file was not found at {model_path}. Please make sure it is in the correct directory.")
         return
+    except Exception as e:
+        st.error(f"An error occurred while loading the model: {e}")
+        return
 
     # Display dataset
     st.write("Here is the child mortality dataset used for the prediction:")
-    st.write(iris_df)
+    st.write(mortality_df)
 
     # Extract feature columns from the dataframe
     feature_columns = ["sepal_length", "sepal_width", "petal_length", "petal_width"]
