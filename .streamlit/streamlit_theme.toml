@@ -1,0 +1,7 @@
+
+[tool.streamlit.theme]
+primaryColor = "#CDCCE9"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#CAD7E9"
+textColor = "#041E50"
+font = "sans serif"
