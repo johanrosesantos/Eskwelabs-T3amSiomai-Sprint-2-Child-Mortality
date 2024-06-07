@@ -113,8 +113,10 @@ def main():
         else:
             globals()[element] = 0
 
-
-
+    ### Household Head
+    head_mapping = {"Male": 0, "Female": 1}
+    selected_head = st.selectbox("Select the sex of the household head", ["Male", "Female"], index=0)
+    householdhead_female = head_mapping[selected_head]
 
 
 
