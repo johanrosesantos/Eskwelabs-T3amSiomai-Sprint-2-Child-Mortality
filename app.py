@@ -118,7 +118,20 @@ def main():
     selected_head = st.selectbox("Select the sex of the household head", ["Male", "Female"], index=0)
     householdhead_female = head_mapping[selected_head]
 
-
+    ### Wealth index
+    wealth_mapping = {
+        "Php10,957-Php43,828": "wealth_poorer",
+        "Php43,828-Php76,669": "wealth_middle",
+        "Php76,669-Php219,140": "wealth_richer",
+        "more than Php219,140": "wealth_richest"}
+    # Display select box for selection
+    selected_wealth = st.selectbox("What is your household's total income?", ["less than Php10,957", "Php10,957-Php43,828", "Php43,828-Php76,669", "Php76,669-Php219,140","more than Php219,140"], index=0)
+    # Assign values based on selection
+    for wealth, element in wealth_mapping.items():
+        if selected_wealth == wealth:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
 
 
 
