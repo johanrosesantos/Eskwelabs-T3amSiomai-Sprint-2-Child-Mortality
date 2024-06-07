@@ -58,29 +58,29 @@ def main():
                        "toilet_unknown",
                        "drinkingwater_unimproved",
                        "drinkingwater_unknown",
-                       "mother_age_20_24",
-                       "mother_age_25_29",
-                       "mother_age_30_34",
-                       "mother_age_35_39",
-                       "mother_age_40_44",
-                       "mother_age_45_49",
-                       "mothereduc_primary",
-                       "mothereduc_secondary",
-                       "mothereduc_higher",
-                       "mother_working",
-                       "total_children_born",
-                       "age_first_birth",
-                       "total_births_last5years",
+                       #"mother_age_20_24",
+                       #"mother_age_25_29",
+                       #"mother_age_30_34",
+                       #"mother_age_35_39",
+                       #"mother_age_40_44",
+                       #"mother_age_45_49",
+                       #"mothereduc_primary",
+                       #"mothereduc_secondary",
+                       #"mothereduc_higher",
+                       #"mother_working",
+                       #"total_children_born",
+                       #"age_first_birth",
+                       #"total_births_last5years",
                        "contraceptive_folk",
                        "contraceptive_traditional",
                        "contraceptive_modern",
                        "breastfeeding_never",
                        "breastfeeding_still",
                        "child_sex_female",
-                       "child_age_months",
-                       "twin_1st",
-                       "twin_2nd",
-                       "preceding_birthinterval_months",
+                       #"child_age_months",
+                       #"twin_1st",
+                       #"twin_2nd",
+                       #"preceding_birthinterval_months",
                        "childsize_larger",
                        "childsize_average",
                        "childsize_smaller",
@@ -159,9 +159,37 @@ def main():
         else:
             globals()[element] = 0
 
+    ### Toilet Facility
+    toilet_mapping = {
+        "Unimproved Toilet Facility": "toilet_unimproved",
+        "Open Defecation": "toilet_open defecation",
+        "I don't know": "toilet_unknown"}
+    # Display select box for selection
+    selected_toilet = st.selectbox("What kind of toilet do you use?", ["Unimproved Toilet Facility", "Unimproved Toilet Facility", "Open Defecation", "I don't know"], index=0)
+    # Assign values based on selection
+    for toilet, element in toilet_mapping.items():
+        if selected_toilet == toilet:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+    st.write("*Improved Toilet Facility - flush/pour flush toilet connected to piped sewer/septic tank/pit latrine, pit latrine with slab, composting toilet*")
+    st.write("*Unimproved Toilet Facility - flush/pour flush toilet NOT connected to piped sewer/septic tank/pit latrine, open pit, bucket, hanging toilet/latrine*")
+    st.write("*Open Defecation - no facility/toilet, bush, field*")
 
-
-
+    ### Drinking Water
+    water_mapping = {
+        "Unimproved Drinking Water Source": "drinkingwater_unimproved",
+        "I don't know": "drinkingwater_unknown"}
+    # Display select box for selection
+    selected_water = st.selectbox("Where do you get your drinking water?", ["Improved Drinking Water Source", "Unimproved Drinking Water Source", "I don't know"], index=0)
+    # Assign values based on selection
+    for water, element in water_mapping.items():
+        if selected_water == water:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+    st.write("*Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*")
+    st.write("*Unimproved Drinking Water Source - unprotected dug well/spring, surface water*")
 
     
     ### Contraceptive
@@ -241,35 +269,34 @@ def main():
                           toilet_unknown,
                           drinkingwater_unimproved,
                           drinkingwater_unknown,
-                          motherage_20_24,
-                          motherage_25_29,
-                          motherage_30_34,
-                          motherage_35_39,
-                          motherage_40_44,
-                          motherage_45_49,
-                          mothereduc_primary,
-                          mothereduc_secondary,
-                          mothereduc_higher,
-                          mother_working,
-                          total_children_born,
-                          age_first_birth,
-                          total_births_last5years,
+                          #motherage_20_24,
+                          #motherage_25_29,
+                          #motherage_30_34,
+                          #motherage_35_39,
+                          #motherage_40_44,
+                          #motherage_45_49,
+                          #mothereduc_primary,
+                          #mothereduc_secondary,
+                          #mothereduc_higher,
+                          #mother_working,
+                          #total_children_born,
+                          #age_first_birth,
+                          #total_births_last5years,
                           contraceptive_folk,
                           contraceptive_traditional,
                           contraceptive_modern,
                           breastfeeding_never,
                           breastfeeding_still,
                           child_sex_female,
-                          child_age_months,
-                          twin_1st,
-                          twin_2nd,
-                          preceeding_birthinterval_months,
+                          #child_age_months,
+                          #twin_1st,
+                          #twin_2nd,
+                          #preceeding_birthinterval_months,
                           childsize_larger,
                           childsize_average,
                           childsize_smaller,
                           childsize_verysmall,
                           childsize_unknown]])
-
 
     # Batch process - combine dataset with new input
     full_data = np.vstack([mortality_data, new_data])
