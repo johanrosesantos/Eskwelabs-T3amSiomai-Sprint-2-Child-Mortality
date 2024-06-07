@@ -6,34 +6,34 @@ import os
 
 # Define the Streamlit app
 def main():
-    st.title("Iris Species Prediction")
+    st.title("Child Mortality Risk Prediction")
 
     # Determine the directory of the current script
     current_dir = os.path.dirname(__file__)
 
     # Construct the path to the iris.csv file
-    iris_csv_path = os.path.join(current_dir, "data", "preprocessed_dhs_dummies.csv")
+    mortality_csv_path = os.path.join(current_dir, "data", "preprocessed_dhs_dummies.csv")
 
-    # Load the Iris dataset from CSV
+    # Load the mortality dataset from CSV
     try:
-        iris_df = pd.read_csv(iris_csv_path)
+        mortality_df = pd.read_csv(mortality_csv_path)
     except FileNotFoundError:
-        st.error(f"The iris.csv file was not found at {iris_csv_path}. Please make sure it is in the correct directory.")
+        st.error(f"The preprocessed_dhs_dummies.csv file was not found at {mortality_csv_path}. Please make sure it is in the correct directory.")
         return
 
-    # Construct the path to the model.pkl file
-    model_path = os.path.join(current_dir, "model.pkl")
+    # Construct the path to the adaboost.pkl file
+    model_path = os.path.join(current_dir, "adaboost.pkl")
 
     # Load the model from pickle file
     try:
         with open(model_path, "rb") as f:
             model = pickle.load(f)
     except FileNotFoundError:
-        st.error(f"The model.pkl file was not found at {model_path}. Please make sure it is in the correct directory.")
+        st.error(f"The adaboost.pkl file was not found at {model_path}. Please make sure it is in the correct directory.")
         return
 
     # Display dataset
-    st.write("Here is the Iris dataset used for predictions:")
+    st.write("Here is the child mortality dataset used for the prediction:")
     st.write(iris_df)
 
     # Extract feature columns from the dataframe
