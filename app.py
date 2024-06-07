@@ -372,14 +372,14 @@ def main():
     full_data = np.vstack([mortality_data, new_data])
     
     # Predict the outcome
-    if st.button("Predict"):
+    if st.button("Predict child mortality risk"):
         try:
             predictions = model.predict(full_data)
             new_prediction = predictions[-1]
-            st.write(f"The predicted outcome for the new input is: {new_prediction}")
+            risk_status = "at risk" if new_prediction == 1 else "not at risk"
+            st.write(f"Your child is {new_prediction} of child mortality.")
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
-
 
 if __name__ == "__main__":
     main()
