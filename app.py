@@ -27,12 +27,16 @@ with open('model.pkl', 'rb') as file:
 def main():
     st.title("Iris Species Prediction")
 
-    # Get user input
+    # Single user input
+    # disadvantage - takes time
+    
     sepal_length = st.number_input("Sepal Length (cm)", min_value=0.0, max_value=10.0, value=5.0, step=0.1)
     sepal_width = st.number_input("Sepal Width (cm)", min_value=0.0, max_value=10.0, value=3.0, step=0.1)
     petal_length = st.number_input("Petal Length (cm)", min_value=0.0, max_value=10.0, value=4.0, step=0.1)
     petal_width = st.number_input("Petal Width (cm)", min_value=0.0, max_value=10.0, value=1.0, step=0.1)
 
+    # Batch process - use holdout from dataset include user input then populate
+    
     # Predict the species
     if st.button("Predict"):
         features = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
