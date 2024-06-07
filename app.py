@@ -2,24 +2,34 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
+import os
 
 # Define the Streamlit app
 def main():
     st.title("Iris Species Prediction")
 
+    # Determine the directory of the current script
+    current_dir = os.path.dirname(__file__)
+
+    # Construct the path to the iris.csv file
+    iris_csv_path = os.path.join(current_dir, "data", "iris.csv")
+
     # Load the Iris dataset from CSV
     try:
-        iris_df = pd.read_csv("Eskwelabs-T3amSiomai-Sprint-2-Child-Mortality/data/iris.csv")
+        iris_df = pd.read_csv(iris_csv_path)
     except FileNotFoundError:
-        st.error("The iris.csv file was not found. Please make sure it is in the correct directory.")
+        st.error(f"The iris.csv file was not found at {iris_csv_path}. Please make sure it is in the correct directory.")
         return
+
+    # Construct the path to the model.pkl file
+    model_path = os.path.join(current_dir, "model.pkl")
 
     # Load the model from pickle file
     try:
-        with open("model.pkl", "rb") as f:
+        with open(model_path, "rb") as f:
             model = pickle.load(f)
     except FileNotFoundError:
-        st.error("The model.pkl file was not found. Please make sure it is in the correct directory.")
+        st.error(f"The model.pkl file was not found at {model_path}. Please make sure it is in the correct directory.")
         return
 
     # Display dataset
