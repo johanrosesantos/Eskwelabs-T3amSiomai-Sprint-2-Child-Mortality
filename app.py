@@ -1,8 +1,20 @@
-
 import streamlit as st
 import pickle
 import numpy as np
 from sklearn.datasets import load_iris
+
+# Load the custom CSS with the background image
+custom_css = """
+<style>
+body {
+    background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg');
+    background-size: cover;
+}
+</style>
+"""
+
+# Display the custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
 
 # Load the iris dataset to get target names
 iris = load_iris()
