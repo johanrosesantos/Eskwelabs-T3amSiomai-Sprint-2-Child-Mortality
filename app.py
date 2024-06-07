@@ -13,13 +13,13 @@ def main():
     current_dir = os.path.dirname(__file__)
 
     # Construct the path to the preprocessed_dhs_dummies.csv file
-    mortality_csv_path = os.path.join(current_dir, "data", "preprocessed_dhs_dummies.csv")
+    mortality_csv_path = os.path.join(current_dir, "data", "mortality_data.csv")
 
     # Load the mortality dataset from CSV
     try:
         mortality_df = pd.read_csv(mortality_csv_path)
     except FileNotFoundError:
-        st.error(f"The preprocessed_dhs_dummies.csv file was not found at {mortality_csv_path}. Please make sure it is in the correct directory.")
+        st.error(f"The mortality_data.csv file was not found at {mortality_csv_path}. Please make sure it is in the correct directory.")
         return
 
     # Construct the path to the adaboost.pkl file
@@ -41,19 +41,213 @@ def main():
     st.write(mortality_df)
 
     # Extract feature columns from the dataframe
-    # Replace with actual feature columns from your dataset
-    feature_columns = ["feature1", "feature2", "feature3", "feature4"]
+    feature_columns = [“b5”,
+                        “rural”,
+                        “region_mindanao”,
+                        “region_visayas”,
+                        “householdhead_female”,
+                        “wealth_poorer”,
+                        “wealth_middle”,
+                        “wealth_richer”,
+                        “wealth_richest”,
+                        “freqtv_lessthanonce”,
+                        “freqtv_atleasonce”,
+                        “freqradio_lessthanonce”,
+                        “freqradio_atleasonce”,
+                        “toilet_unimproved”,
+                        “toilet_open defecation”,
+                        “toilet_unknown”,
+                        “drinkingwater_unimproved”,
+                        “drinkingwater_unknown”,
+                        “motherage_20-24”,
+                        “motherage_25-29”,
+                        “motherage_30-34”,
+                        “motherage_35-39”,
+                        “motherage_40-44”,
+                        “motherage_45-49”,
+                        “mothereduc_primary”,
+                        “mothereduc_secondary”,
+                        “mothereduc_higher”,
+                        “mother_working”,
+                        “total_children_born”,
+                        “age_first_birth”,
+                        “total_births_last5years”,
+                        “contraceptive_folk”,
+                        “contraceptive_traditional”,
+                        “contraceptive_modern”,
+                        “breastfeeding_never”,
+                        “breastfeeding_still”,
+                        “child_sex_female”,
+                        “child_age_months”,
+                        “twin_1st”,
+                        “twin_2nd”,
+                        “preceeding_birthinterval_months”,
+                        “childsize_larger”,
+                        “childsize_average”,
+                        “childsize_smaller”,
+                        “childsize_verysmall”,
+                        “childsize_unknown”]
     mortality_data = mortality_df[feature_columns].values
 
     # User input for new data
     st.header("Enter New Data for Prediction")
-    feature1 = st.number_input("Feature 1", min_value=0.0, max_value=100.0, value=50.0, step=0.1)
-    feature2 = st.number_input("Feature 2", min_value=0.0, max_value=100.0, value=50.0, step=0.1)
-    feature3 = st.number_input("Feature 3", min_value=0.0, max_value=100.0, value=50.0, step=0.1)
-    feature4 = st.number_input("Feature 4", min_value=0.0, max_value=100.0, value=50.0, step=0.1)
+    
+    ## Household Information
+    st.write("")
+    st.subheader("Household Information")
+    
+    sex_mapping = {"Male": 0, "Female": 1}
+    selected_sex = st.selectbox("Select your sex", ["Male", "Female"])
+    sex = sex_mapping[selected_sex]
+
+    region_mapping = {"Male": 0, "Female": 1}
+    selected_region = st.selectbox("Select your sex", ["Male", "Female"])
+    sex = sex_mapping[selected_sex]
+    
+    rural = st.number_input("Feature 1", min_value=0.0, max_value=100.0, value=50.0, step=0.1)
+    region_mindanao =
+    region_visayas =
+    householdhead_female =
+    wealth_poorer =
+    wealth_middle =
+    wealth_richer =
+    wealth_richest =
+    freqtv_lessthanonce =
+    freqtv_atleasonce =
+    freqradio_lessthanonce =
+    freqradio_atleasonce =
+    toilet_unimproved =
+    toilet_open defecation =
+    toilet_unknown =
+    drinkingwater_unimproved =
+    drinkingwater_unknown =
+    motherage_20-24 =
+    motherage_25-29 =
+    motherage_30-34 =
+    motherage_35-39 =
+    motherage_40-44 =
+    motherage_45-49 =
+    mothereduc_primary =
+    mothereduc_secondary =
+    mothereduc_higher =
+    mother_working =
+    total_children_born =
+    age_first_birth =
+    total_births_last5years =
+    
+    
+    
+    
+    
+    ### Contraceptive
+    contra_mapping = {
+        "Folkloric method": "contraceptive_folk",
+        "Traditional method": "contraceptive_traditional",
+        "Modern method": "contraceptive_modern"}
+    # Display select box for selection
+    selected_contra = st.selectbox("What kind of contraceptive method you or your partner use?", ["Folkloric method", "Traditional method", "Modern method", "None"], index=3)
+    # Assign values based on selection
+    for contra, element in contra_mapping.items():
+        if selected_contra == contra:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+    st.write("*Folkloric method - includes abdominal massage, amulet, bato-balani, asugi, mixtures, laxatives, salt, herbs and spiritual/cultural practices*")
+    st.write("*Traditional method - includes abstinence, rhythmic or calendar method and withdrawal*")
+    st.write("*Modern method - includes pill, IUD, injection, implants, female/male sterilization, male/female condom, LAM, and emergency contraception*")
+    
+     =
+     =
+
+    ### Breastfeeding
+    breastfeed_mapping = {
+        "Never": "breastfeeding_never",
+        "Yes, up to now": "breastfeeding_still"}
+    # Display select box for selection
+    selected_breastfeed = st.selectbox("Have you ever breastfed your child?", ["Yes, before", "Yes, up to now", "Never"], index=0)
+    # Assign values based on selection
+    for breastfeed, element in breastfeed_mapping.items():
+        if selected_breastfeed == breastfeed:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+            
+    ## Child Information
+    st.write("")
+    st.subheader("Child Information")
+
+    sex_mapping = {"Male": 0, "Female": 1}
+    selected_sex = st.selectbox("Select the child's sex", ["Male", "Female"])
+    child_sex_female = sex_mapping[selected_sex]
+    
+    child_age_months =
+    twin_1st =
+    twin_2nd =
+    preceeding_birthinterval_months =
+
+    ### Child size
+    childsize_mapping = {
+        "Larger": "childsize_larger",
+        "Average": "childsize_average",
+        "Smaller": "childsize_smaller",
+        "Very Small": "childsize_verysmall",
+        "Unknown": "childsize_unknown"}
+    # Display select box for child size selection
+    selected_childsize = st.selectbox("Select the child's size", ["Larger", "Average", "Smaller", "Very Small", "Unknown"], index=4)
+    # Assign values based on selected child size
+    for size, element in childsize_mapping.items():
+        if selected_childsize == size:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+
 
     # Prepare new input for prediction
-    new_data = np.array([[feature1, feature2, feature3, feature4]])
+    new_data = np.array([[rural,
+                             region_mindanao,
+                             region_visayas,
+                             householdhead_female,
+                             wealth_poorer,
+                             wealth_middle,
+                             wealth_richer,
+                             wealth_richest,
+                             freqtv_lessthanonce,
+                             freqtv_atleasonce,
+                             freqradio_lessthanonce,
+                             freqradio_atleasonce,
+                             toilet_unimproved,
+                             toilet_open defecation,
+                             toilet_unknown,
+                             drinkingwater_unimproved,
+                             drinkingwater_unknown,
+                             motherage_20-24,
+                             motherage_25-29,
+                             motherage_30-34,
+                             motherage_35-39,
+                             motherage_40-44,
+                             motherage_45-49,
+                             mothereduc_primary,
+                             mothereduc_secondary,
+                             mothereduc_higher,
+                             mother_working,
+                             total_children_born,
+                             age_first_birth,
+                             total_births_last5years,
+                             contraceptive_folk,
+                             contraceptive_traditional,
+                             contraceptive_modern,
+                             breastfeeding_never,
+                             breastfeeding_still,
+                             child_sex_female,
+                             child_age_months,
+                             twin_1st,
+                             twin_2nd,
+                             preceeding_birthinterval_months,
+                             childsize_larger,
+                             childsize_average,
+                             childsize_smaller,
+                             childsize_verysmall,
+                             childsize_unknown]])
 
     # Batch process - combine dataset with new input
     full_data = np.vstack([mortality_data, new_data])
