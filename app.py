@@ -12,7 +12,7 @@ def main():
     current_dir = os.path.dirname(__file__)
 
     # Construct the path to the iris.csv file
-    iris_csv_path = os.path.join(current_dir, "data", "iris.csv")
+    iris_csv_path = os.path.join(current_dir, "data", "preprocessed_dhs_dummies.csv")
 
     # Load the Iris dataset from CSV
     try:
