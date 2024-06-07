@@ -208,6 +208,12 @@ def main():
     # Batch process - combine dataset with new input
     full_data = np.vstack([mortality_data, new_data])
 
+    # One-hot encode categorical variables if necessary
+    # For example, if 'rural' is a categorical variable
+    # You might encode it like this:
+    if 'rural' in categorical_variables:
+        full_data = pd.get_dummies(full_data, columns=['rural'])
+    
     # Predict the outcome
     if st.button("Predict"):
         try:
@@ -216,6 +222,7 @@ def main():
             st.write(f"The predicted outcome for the new input is: {new_prediction}")
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
+
 
 if __name__ == "__main__":
     main()
