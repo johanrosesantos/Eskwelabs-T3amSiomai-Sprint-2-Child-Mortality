@@ -172,9 +172,9 @@ def main():
             globals()[element] = 1
         else:
             globals()[element] = 0
-    st.write("*Improved Toilet Facility - flush/pour flush toilet connected to piped sewer/septic tank/pit latrine, pit latrine with slab, composting toilet*")
-    st.write("*Unimproved Toilet Facility - flush/pour flush toilet NOT connected to piped sewer/septic tank/pit latrine, open pit, bucket, hanging toilet/latrine*")
-    st.write("*Open Defecation - no facility/toilet, bush, field*")
+    st.markdown("*-- Improved Toilet Facility - flush/pour flush toilet connected to piped sewer/septic tank/pit latrine, pit latrine with slab, composting toilet*")
+    st.markdown("*-- Unimproved Toilet Facility - flush/pour flush toilet NOT connected to piped sewer/septic tank/pit latrine, open pit, bucket, hanging toilet/latrine*")
+    st.markdown("*-- Open Defecation - no facility/toilet, bush, field*")
 
     ### Drinking Water
     water_mapping = {
@@ -188,8 +188,8 @@ def main():
             globals()[element] = 1
         else:
             globals()[element] = 0
-    st.markdown("*- Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*")
-    st.markdown("*- Unimproved Drinking Water Source - unprotected dug well/spring, surface water*")
+    st.markdown("*-- Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*")
+    st.markdown("*-- Unimproved Drinking Water Source - unprotected dug well/spring, surface water*")
 
 
 
