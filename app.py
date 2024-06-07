@@ -3,13 +3,7 @@ import pickle
 import numpy as np
 import pandas as pd
 import os
-
-# Ensure the required library is installed
-try:
-    import imblearn
-except ImportError:
-    st.error("The 'imblearn' library is required but not installed. Please install it using 'pip install imbalanced-learn' and try again.")
-    raise
+import imblearn
 
 # Define the Streamlit app
 def main():
