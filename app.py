@@ -162,7 +162,7 @@ def main():
     ### Toilet Facility
     toilet_mapping = {
         "Unimproved Toilet Facility": "toilet_unimproved",
-        "Open Defecation": "toilet_open defecation",
+        "Open Defecation": "toilet_open_defecation",
         "I don't know": "toilet_unknown"}
     # Display select box for selection
     selected_toilet = st.selectbox("What kind of toilet do you use?", ["Unimproved Toilet Facility", "Unimproved Toilet Facility", "Open Defecation", "I don't know"], index=0)
