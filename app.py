@@ -106,7 +106,7 @@ def main():
         "Traditional method": "contraceptive_traditional",
         "Modern method": "contraceptive_modern"}
     # Display select box for selection
-    selected_contra = st.selectbox("What kind of contraceptive method you or your partner use?", ["Folkloric method", "Traditional method", "Modern method", "None"], index=3)
+    selected_contra = st.selectbox("What kind of contraceptive method do you or your partner use?", ["None", "Folkloric method", "Traditional method", "Modern method"], index=0)
     # Assign values based on selection
     for contra, element in contra_mapping.items():
         if selected_contra == contra:
@@ -122,7 +122,7 @@ def main():
         "Never": "breastfeeding_never",
         "Yes, up to now": "breastfeeding_still"}
     # Display select box for selection
-    selected_breastfeed = st.selectbox("Have you ever breastfed your child?", ["Yes, before", "Yes, up to now", "Never"], index=0)
+    selected_breastfeed = st.selectbox("Have you ever breastfed your child?", ["Never", "Yes, before", "Yes, up to now"], index=0)
     # Assign values based on selection
     for breastfeed, element in breastfeed_mapping.items():
         if selected_breastfeed == breastfeed:
@@ -159,53 +159,52 @@ def main():
         else:
             globals()[element] = 0
 
-
     # Prepare new input for prediction
     new_data = np.array([[rural,
-                             region_mindanao,
-                             region_visayas,
-                             householdhead_female,
-                             wealth_poorer,
-                             wealth_middle,
-                             wealth_richer,
-                             wealth_richest,
-                             freqtv_lessthanonce,
-                             freqtv_atleasonce,
-                             freqradio_lessthanonce,
-                             freqradio_atleasonce,
-                             toilet_unimproved,
-                             "toilet_open defecation",
-                             toilet_unknown,
-                             drinkingwater_unimproved,
-                             drinkingwater_unknown,
-                             "motherage_20-24",
-                             "motherage_25-29",
-                             "motherage_30-34",
-                             "motherage_35-39",
-                             "motherage_40-44",
-                             "motherage_45-49",
-                             mothereduc_primary,
-                             mothereduc_secondary,
-                             mothereduc_higher,
-                             mother_working,
-                             total_children_born,
-                             age_first_birth,
-                             total_births_last5years,
-                             contraceptive_folk,
-                             contraceptive_traditional,
-                             contraceptive_modern,
-                             breastfeeding_never,
-                             breastfeeding_still,
-                             child_sex_female,
-                             child_age_months,
-                             twin_1st,
-                             twin_2nd,
-                             preceeding_birthinterval_months,
-                             childsize_larger,
-                             childsize_average,
-                             childsize_smaller,
-                             childsize_verysmall,
-                             childsize_unknown]])
+                         region_mindanao,
+                         region_visayas,
+                         householdhead_female,
+                         wealth_poorer,
+                         wealth_middle,
+                         wealth_richer,
+                         wealth_richest,
+                         freqtv_lessthanonce,
+                         freqtv_atleasonce,
+                         freqradio_lessthanonce,
+                         freqradio_atleasonce,
+                         toilet_unimproved,
+                         "toilet_open defecation",
+                         toilet_unknown,
+                         drinkingwater_unimproved,
+                         drinkingwater_unknown,
+                         "motherage_20-24",
+                         "motherage_25-29",
+                         "motherage_30-34",
+                         "motherage_35-39",
+                         "motherage_40-44",
+                         "motherage_45-49",
+                         mothereduc_primary,
+                         mothereduc_secondary,
+                         mothereduc_higher,
+                         mother_working,
+                         total_children_born,
+                         age_first_birth,
+                         total_births_last5years,
+                         contraceptive_folk,
+                         contraceptive_traditional,
+                         contraceptive_modern,
+                         breastfeeding_never,
+                         breastfeeding_still,
+                         child_sex_female,
+                         child_age_months,
+                         twin_1st,
+                         twin_2nd,
+                         preceeding_birthinterval_months,
+                         childsize_larger,
+                         childsize_average,
+                         childsize_smaller,
+                         childsize_verysmall,
+                         childsize_unknown]])
 
     # Batch process - combine dataset with new input
     full_data = np.vstack([mortality_data, new_data])
