@@ -7,7 +7,7 @@ from sklearn.datasets import load_iris
 custom_css = """
 <style>
 body {
-    background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg');
+    background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
     background-size: cover;
 }
 </style>
