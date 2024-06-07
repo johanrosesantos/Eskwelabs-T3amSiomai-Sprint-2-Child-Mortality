@@ -37,7 +37,7 @@ def main():
         return
 
     # Display dataset
-    st.write("Here is the child mortality dataset used for the prediction:")
+    st.write("Here is the DHS Program child mortality dataset used for the prediction:")
     st.write(mortality_df)
 
     # Extract feature columns from the dataframe
@@ -89,7 +89,7 @@ def main():
     mortality_data = mortality_df[feature_columns].values
 
     # User input for new data
-    st.header("Enter New Data for Prediction")
+    st.header("Check your child's risk to child mortality")
     
     ## Household Information
     st.write("")
