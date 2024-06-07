@@ -104,41 +104,6 @@ def main():
     selected_region = st.selectbox("Select your sex", ["Male", "Female"])
     sex = sex_mapping[selected_sex]
     
-    rural = st.number_input("Feature 1", min_value=0.0, max_value=100.0, value=50.0, step=0.1)
-    region_mindanao =
-    region_visayas =
-    householdhead_female =
-    wealth_poorer =
-    wealth_middle =
-    wealth_richer =
-    wealth_richest =
-    freqtv_lessthanonce =
-    freqtv_atleasonce =
-    freqradio_lessthanonce =
-    freqradio_atleasonce =
-    toilet_unimproved =
-    toilet_open defecation =
-    toilet_unknown =
-    drinkingwater_unimproved =
-    drinkingwater_unknown =
-    motherage_20-24 =
-    motherage_25-29 =
-    motherage_30-34 =
-    motherage_35-39 =
-    motherage_40-44 =
-    motherage_45-49 =
-    mothereduc_primary =
-    mothereduc_secondary =
-    mothereduc_higher =
-    mother_working =
-    total_children_born =
-    age_first_birth =
-    total_births_last5years =
-    
-    
-    
-    
-    
     ### Contraceptive
     contra_mapping = {
         "Folkloric method": "contraceptive_folk",
@@ -156,9 +121,6 @@ def main():
     st.write("*Traditional method - includes abstinence, rhythmic or calendar method and withdrawal*")
     st.write("*Modern method - includes pill, IUD, injection, implants, female/male sterilization, male/female condom, LAM, and emergency contraception*")
     
-     =
-     =
-
     ### Breastfeeding
     breastfeed_mapping = {
         "Never": "breastfeeding_never",
@@ -180,10 +142,10 @@ def main():
     selected_sex = st.selectbox("Select the child's sex", ["Male", "Female"])
     child_sex_female = sex_mapping[selected_sex]
     
-    child_age_months =
-    twin_1st =
-    twin_2nd =
-    preceeding_birthinterval_months =
+    #child_age_months =
+    #twin_1st =
+    #twin_2nd =
+    #preceeding_birthinterval_months =
 
     ### Child size
     childsize_mapping = {
