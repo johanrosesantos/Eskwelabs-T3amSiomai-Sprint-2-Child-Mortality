@@ -96,8 +96,30 @@ def main():
     st.subheader("Household Information")
     
     rural_mapping = {"Urban Area": 0, "Rural Area": 1}
-    selected_rural = st.selectbox("Where are you located?", ["Urban Area", "Rural Area"])
+    selected_rural = st.selectbox("Where are you located?", ["Urban Area", "Rural Area"], index=0)
     rural = rural_mapping[selected_rural]
+
+    ### Region
+    region_mapping = {
+        "Visayas": "region_visayas",
+        "Mindanao": "region_mindanao",
+        "Modern method": "contraceptive_modern"}
+    # Display select box for selection
+    selected_region = st.selectbox("What region are you residing in?", ["Luzon", "Visayas", "Mindanao"], index=0)
+    # Assign values based on selection
+    for region, element in region_mapping.items():
+        if selected_region == region:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+
+
+
+
+
+
+
+
     
     ### Contraceptive
     contra_mapping = {
