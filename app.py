@@ -300,12 +300,6 @@ def main():
 
     # Batch process - combine dataset with new input
     full_data = np.vstack([mortality_data, new_data])
-
-    # One-hot encode categorical variables if necessary
-    # For example, if 'rural' is a categorical variable
-    # You might encode it like this:
-    if 'rural' in categorical_variables:
-        full_data = pd.get_dummies(full_data, columns=['rural'])
     
     # Predict the outcome
     if st.button("Predict"):
