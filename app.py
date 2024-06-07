@@ -58,16 +58,16 @@ def main():
                        "toilet_unknown",
                        "drinkingwater_unimproved",
                        "drinkingwater_unknown",
-                       #"mother_age_20_24",
-                       #"mother_age_25_29",
-                       #"mother_age_30_34",
-                       #"mother_age_35_39",
-                       #"mother_age_40_44",
-                       #"mother_age_45_49",
-                       #"mothereduc_primary",
-                       #"mothereduc_secondary",
-                       #"mothereduc_higher",
-                       #"mother_working",
+                       "mother_age_20_24",
+                       "mother_age_25_29",
+                       "mother_age_30_34",
+                       "mother_age_35_39",
+                       "mother_age_40_44",
+                       "mother_age_45_49",
+                       "mothereduc_primary",
+                       "mothereduc_secondary",
+                       "mothereduc_higher",
+                       "mother_working",
                        #"total_children_born",
                        #"age_first_birth",
                        #"total_births_last5years",
@@ -188,8 +188,27 @@ def main():
             globals()[element] = 1
         else:
             globals()[element] = 0
+    st.markdown(""
+    - *Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*
+    - *Unimproved Drinking Water Source - unprotected dug well/spring, surface water*
+    "")
     st.write("*Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*")
     st.write("*Unimproved Drinking Water Source - unprotected dug well/spring, surface water*")
+
+    ## Mother Information
+    st.write("")
+    st.subheader("Mother's Information")
+
+
+    motherage_20-24 =
+    motherage_25-29 =
+    motherage_30-34 =
+    motherage_35-39 =
+    motherage_40-44 =
+    motherage_45-49 =
+
+
+
 
     
     ### Contraceptive
@@ -222,9 +241,9 @@ def main():
         else:
             globals()[element] = 0
             
-    ## Child Information
+    ## Child's Information
     st.write("")
-    st.subheader("Child Information")
+    st.subheader("Child's Information")
 
     sex_mapping = {"Male": 0, "Female": 1}
     selected_sex = st.selectbox("Select the child's sex", ["Male", "Female"])
