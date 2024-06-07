@@ -241,7 +241,7 @@ def main():
     age_first_birth = st.number_input("At what age did you have your first child?", min_value=1, max_value=50, value=1, step=1)
 
     # Total births in 5 years
-    total_births_last5years = st.number_input("How many times have you given birth in the last 5 years?"", min_value=1, max_value=10, value=1, step=1)
+    total_births_last5years = st.number_input("How many times have you given birth in the last 5 years?", min_value=1, max_value=10, value=1, step=1)
 
     ### Contraceptive
     contra_mapping = {
