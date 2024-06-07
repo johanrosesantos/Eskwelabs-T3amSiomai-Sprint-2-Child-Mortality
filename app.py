@@ -189,8 +189,8 @@ def main():
         else:
             globals()[element] = 0
     st.markdown(""
-    - *Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*
-    - *Unimproved Drinking Water Source - unprotected dug well/spring, surface water*
+    - Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*
+    - Unimproved Drinking Water Source - unprotected dug well/spring, surface water*
     "")
     st.write("*Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*")
     st.write("*Unimproved Drinking Water Source - unprotected dug well/spring, surface water*")
