@@ -95,9 +95,9 @@ def main():
     st.write("")
     st.subheader("Household Information")
     
-    sex_mapping = {"Male": 0, "Female": 1}
-    selected_sex = st.selectbox("Select your sex", ["Male", "Female"])
-    sex = sex_mapping[selected_sex]
+    rural_mapping = {"Urban Area": 0, "Rural Area": 1}
+    selected_rural = st.selectbox("Where are you located?", ["Urban Area", "Rural Area"])
+    rural = rural_mapping[selected_rural]
     
     ### Contraceptive
     contra_mapping = {
