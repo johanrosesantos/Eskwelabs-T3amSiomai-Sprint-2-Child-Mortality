@@ -377,7 +377,11 @@ def main():
             predictions = model.predict(full_data)
             new_prediction = predictions[-1]
             risk_status = "at risk" if new_prediction == 1 else "not at risk"
-            st.markdown(f"<h2>Your child is <i>{risk_status}</i> of child mortality.</h2>", unsafe_allow_html=True)
+            
+            color = "red"
+            result_text = f"<h2>Your child is <i><span style='color:{color};'>{risk_status}</span></i> of child mortality.</h2>"
+            st.markdown(result_text, unsafe_allow_html=True)
+        
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
 
