@@ -377,7 +377,7 @@ def main():
             predictions = model.predict(full_data)
             new_prediction = predictions[-1]
             risk_status = "at risk" if new_prediction == 1 else "not at risk"
-            st.write(f"Your child is {new_prediction} of child mortality.")
+            st.markdown(f"**Your child is {risk_status} of child mortality.**")
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
 
