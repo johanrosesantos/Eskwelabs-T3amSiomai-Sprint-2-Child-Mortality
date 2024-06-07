@@ -115,7 +115,7 @@ def main():
 
     ### Household Head
     head_mapping = {"Male": 0, "Female": 1}
-    selected_head = st.selectbox("Select the sex of the household head", ["Male", "Female"], index=0)
+    selected_head = st.selectbox("What is the sex of the household head?", ["Male", "Female"], index=0)
     householdhead_female = head_mapping[selected_head]
 
     ### Wealth index
@@ -125,13 +125,41 @@ def main():
         "Php76,669-Php219,140": "wealth_richer",
         "more than Php219,140": "wealth_richest"}
     # Display select box for selection
-    selected_wealth = st.selectbox("What is your household's total income?", ["less than Php10,957", "Php10,957-Php43,828", "Php43,828-Php76,669", "Php76,669-Php219,140","more than Php219,140"], index=0)
+    selected_wealth = st.selectbox("What is your household's total income?", ["less than Php10,957", "Php10,957-Php43,828", "Php43,828-Php76,669", "Php76,669-Php219,140","more than Php219,140"], index=2)
     # Assign values based on selection
     for wealth, element in wealth_mapping.items():
         if selected_wealth == wealth:
             globals()[element] = 1
         else:
             globals()[element] = 0
+
+    ### Frequency TV
+    tv_mapping = {
+        "Less than once a week": "freqtv_lessthanonce",
+        "At least once a week": "freqtv_atleasonce"}
+    # Display select box for selection
+    selected_tv = st.selectbox("How frequent do you watch TV?", ["I don't watch TV", "Less than once a week", "At least once a week"], index=2)
+    # Assign values based on selection
+    for tv, element in tv_mapping.items():
+        if selected_tv == tv:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+    
+    ### Frequency Radio
+    rad_mapping = {
+        "Less than once a week": "freqradio_lessthanonce",
+        "At least once a week": "freqradio_atleasonce"}
+    # Display select box for selection
+    selected_rad = st.selectbox("How frequent do you listen to radio?", ["I don't listen to radio", "Less than once a week", "At least once a week"], index=2)
+    # Assign values based on selection
+    for rad, element in rad_mapping.items():
+        if selected_rad == rad:
+            globals()[element] = 1
+        else:
+            globals()[element] = 0
+
+
 
 
 
