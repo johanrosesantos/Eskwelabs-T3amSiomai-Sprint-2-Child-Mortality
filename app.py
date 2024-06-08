@@ -7,7 +7,7 @@ import imblearn
 
 # Define the Streamlit app
 def main():
-    st.title("Child Mortality Risk Prediction")
+    st.title(":warning: Child Mortality Risk Prediction")
 
     # Determine the directory of the current script
     current_dir = os.path.dirname(__file__)
@@ -372,6 +372,7 @@ def main():
     full_data = np.vstack([mortality_data, new_data])
     
     # Predict the outcome
+        st.write("")
     if st.button("Predict child mortality risk"):
         try:
             predictions = model.predict(full_data)
