@@ -11,7 +11,7 @@ def main():
     <style>
     .stApp {
         background-color: lightblue;
-        /* background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs'); */
+        background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
