@@ -7,35 +7,22 @@ import imblearn
 
 # Define the Streamlit app
 def main():
-    # CSS for background image with overlay
+    # Load the custom CSS with the background image
     custom_css = """
     <style>
-    body {
-        background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
+    .stApp {
+        background-color: lightblue;
+        /* background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs'); */
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
     }
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-        z-index: -1;
-    }
-    .main-content {
-        position: relative;
-        z-index: 1;
-        color: white; /* Text color */
-    }
     </style>
     """
+    
+    # Display the custom CSS
     st.markdown(custom_css, unsafe_allow_html=True)
-    st.markdown('<div class="overlay"></div>', unsafe_allow_html=True)
-    st.markdown('<div class="main-content">', unsafe_allow_html=True)
 
     
 
