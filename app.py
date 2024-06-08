@@ -7,7 +7,7 @@ import imblearn
 
 # Define the Streamlit app
 def main():
-    # Load the custom CSS with the background image
+    # CSS for background image with overlay
     custom_css = """
     <style>
     body {
@@ -17,18 +17,24 @@ def main():
         background-attachment: fixed;
         background-position: center;
     }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+        z-index: -1;
+    }
     .main-content {
         position: relative;
-        z-index: 1; /* Ensure content is above the overlay */
+        z-index: 1;
         color: white; /* Text color */
     }
     </style>
     """
-
-    # Display the custom CSS
     st.markdown(custom_css, unsafe_allow_html=True)
-    
-    # Add a container div for the main content
+    st.markdown('<div class="overlay"></div>', unsafe_allow_html=True)
     st.markdown('<div class="main-content">', unsafe_allow_html=True)
 
     
