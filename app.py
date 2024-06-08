@@ -93,7 +93,7 @@ def main():
     
     ## Household Information
     st.write("")
-    st.subheader("Household Information")
+    st.subheader(":house: Household Information")
     
     rural_mapping = {"Urban Area": 0, "Rural Area": 1}
     selected_rural = st.selectbox("Where are you located?", ["Urban Area", "Rural Area"], index=0)
