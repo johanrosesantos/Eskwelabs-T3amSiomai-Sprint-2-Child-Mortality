@@ -5,26 +5,26 @@ import pandas as pd
 import os
 import imblearn
 
-
-# Load the custom CSS with the background image
-custom_css = """
-<style>
-body {
-    background-color: lightblue;
-    #background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
-    #background-size: cover;
-    #background-repeat: no-repeat;
-    #background-attachment: fixed;
-    #background-position: center;
-}
-</style>
-"""
-
-# Display the custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
-
 # Define the Streamlit app
 def main():
+    # Load the custom CSS with the background image
+    custom_css = """
+    <style>
+    body {
+        background-color: lightblue;
+        #background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
+        #background-size: cover;
+        #background-repeat: no-repeat;
+        #background-attachment: fixed;
+        #background-position: center;
+    }
+    </style>
+    """
+    
+    # Display the custom CSS
+    st.markdown(custom_css, unsafe_allow_html=True)
+
+    
     st.title(":warning: Child Mortality Risk Prediction")
 
     # Determine the directory of the current script
