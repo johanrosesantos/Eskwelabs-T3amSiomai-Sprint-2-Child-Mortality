@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
+        background-image: url('https://images.template.net/114972/universal-children-s-day-cartoon-background-iuhhr.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
