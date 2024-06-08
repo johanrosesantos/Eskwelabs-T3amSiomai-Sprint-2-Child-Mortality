@@ -7,16 +7,15 @@ import imblearn
 
 # Define the Streamlit app
 def main():
-    # Load the custom CSS with the background image
     custom_css = """
     <style>
-    body {
+    .stApp {
         background-color: lightblue;
-        #background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
-        #background-size: cover;
-        #background-repeat: no-repeat;
-        #background-attachment: fixed;
-        #background-position: center;
+        /* background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs'); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
     }
     </style>
     """
