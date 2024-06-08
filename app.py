@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://images.squarespace-cdn.com/content/v1/5373b147e4b0e5824b359a50/fa7da110-186a-4b8a-ae59-d81fe54ed8da/Newborn+details.jpg?format=1500w');
+        background-image: url('https://img.freepik.com/free-photo/newborn-baby-hand-white-bed_1150-24920.jpg?w=1380&t=st=1717816974~exp=1717817574~hmac=09a333a2faad521847beb4c48a90bb4a13218dae8d645dc72c3b0a191ed521a4');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
