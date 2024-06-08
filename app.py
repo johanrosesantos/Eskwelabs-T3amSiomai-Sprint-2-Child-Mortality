@@ -188,8 +188,8 @@ def main():
             globals()[element] = 1
         else:
             globals()[element] = 0
-    st.markdown("*-- Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*")
-    st.markdown("*-- Unimproved Drinking Water Source - unprotected dug well/spring, surface water*")
+    st.markdown("*--- Improved Drinking Water Source - piped, tube well, borehole, protected dug well/spring, rainwater, tanker truck, bottled water, water refilling station*")
+    st.markdown("*--- Unimproved Drinking Water Source - unprotected dug well/spring, surface water*")
 
 
 
@@ -256,9 +256,9 @@ def main():
             globals()[element] = 1
         else:
             globals()[element] = 0
-    st.write("*Folkloric method - includes abdominal massage, amulet, bato-balani, asugi, mixtures, laxatives, salt, herbs and spiritual/cultural practices*")
-    st.write("*Traditional method - includes abstinence, rhythmic or calendar method and withdrawal*")
-    st.write("*Modern method - includes pill, IUD, injection, implants, female/male sterilization, male/female condom, LAM, and emergency contraception*")
+    st.markdown("*--- Folkloric method - includes abdominal massage, amulet, bato-balani, asugi, mixtures, laxatives, salt, herbs and spiritual/cultural practices*")
+    st.markdown("*--- Traditional method - includes abstinence, rhythmic or calendar method and withdrawal*")
+    st.markdown("*--- Modern method - includes pill, IUD, injection, implants, female/male sterilization, male/female condom, LAM, and emergency contraception*")
     
     ### Breastfeeding
     breastfeed_mapping = {
