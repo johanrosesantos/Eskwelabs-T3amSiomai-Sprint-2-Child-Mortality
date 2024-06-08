@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://media.istockphoto.com/id/1209147618/vector/baby-cute-seamless-pattern-pink-girl-texture-kid-background-vector-illustration.jpg?s=2048x2048&w=is&k=20&c=ng4Leu_TdwSbfvPyeIel9G2nKpSeKHNc-mi-V8du1LU=');
+        background-image: url('https://images.pexels.com/photos/5108235/pexels-photo-5108235.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
