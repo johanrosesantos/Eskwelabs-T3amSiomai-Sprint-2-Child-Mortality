@@ -155,7 +155,7 @@ def main():
         "Less than once a week": "freqtv_lessthanonce",
         "At least once a week": "freqtv_atleasonce"}
     # Display select box for selection
-    selected_tv = st.selectbox("How frequent do you watch TV?", ["I don't watch TV", "Less than once a week", "At least once a week"], index=2)
+    selected_tv = st.selectbox("How frequent do you watch TV?", ["I don't watch TV", "Less than once a week", "At least once a week"], index=1)
     # Assign values based on selection
     for tv, element in tv_mapping.items():
         if selected_tv == tv:
@@ -168,7 +168,7 @@ def main():
         "Less than once a week": "freqradio_lessthanonce",
         "At least once a week": "freqradio_atleasonce"}
     # Display select box for selection
-    selected_rad = st.selectbox("How frequent do you listen to radio?", ["I don't listen to radio", "Less than once a week", "At least once a week"], index=2)
+    selected_rad = st.selectbox("How frequent do you listen to radio?", ["I don't listen to radio", "Less than once a week", "At least once a week"], index=1)
     # Assign values based on selection
     for rad, element in rad_mapping.items():
         if selected_rad == rad:
