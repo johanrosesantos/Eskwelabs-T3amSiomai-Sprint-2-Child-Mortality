@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://i.pinimg.com/564x/b9/03/5a/b9035a8c03e21e0689b6283613746ea8.jpg');
+        background-image: url('https://images.unsplash.com/photo-1576381370502-e69491ed53d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
