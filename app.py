@@ -108,8 +108,7 @@ def main():
     # User input for new data
     st.header("Check your child's risk to child mortality")
 
-    st.markdown("*Your privacy matters. No user input is stored or collected, adhering to the Philippine Data Privacy Act of 2012.*")
-    st.markdown("*All user data input is solely utilized for the purpose of generating predictions within the application only.*")
+    st.markdown("*Your privacy matters. No user input is stored or collected, adhering to the Philippine Data Privacy Act of 2012. All user data input is solely utilized for generating predictions within the application only.*")
     
     ## Household Information
     st.write("")
