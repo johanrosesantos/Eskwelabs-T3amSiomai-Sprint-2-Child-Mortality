@@ -39,15 +39,15 @@ def main():
         st.error(f"The mortality_data.csv file was not found at {mortality_csv_path}. Please make sure it is in the correct directory.")
         return
 
-    # Construct the path to the adaboost_smoteen.pkl file
-    model_path = os.path.join(current_dir, "adaboost_smoteen.pkl")
+    # Construct the path to the adaboost2.pkl file
+    model_path = os.path.join(current_dir, "adaboost2.pkl")
 
     # Load the model from pickle file
     try:
         with open(model_path, "rb") as f:
             model = pickle.load(f)
     except FileNotFoundError:
-        st.error(f"The adaboost_smoteen.pkl file was not found at {model_path}. Please make sure it is in the correct directory.")
+        st.error(f"The adaboost2.pkl file was not found at {model_path}. Please make sure it is in the correct directory.")
         return
     except Exception as e:
         st.error(f"An error occurred while loading the model: {e}")
