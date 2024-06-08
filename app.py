@@ -372,7 +372,7 @@ def main():
     full_data = np.vstack([mortality_data, new_data])
     
     # Predict the outcome
-        st.write("")
+    st.write("")
     if st.button("Predict child mortality risk"):
         try:
             predictions = model.predict(full_data)
