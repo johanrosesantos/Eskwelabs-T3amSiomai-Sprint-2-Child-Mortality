@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://images.pexels.com/photos/5108235/pexels-photo-5108235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-image: url('https://images.squarespace-cdn.com/content/v1/5373b147e4b0e5824b359a50/fa7da110-186a-4b8a-ae59-d81fe54ed8da/Newborn+details.jpg?format=1500w');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
