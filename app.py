@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://i.pinimg.com/originals/27/e1/3e/27e13e3ff18e3ab8962378e446bdacab.jpg');
+        background-image: url('https://p1.pxfuel.com/preview/422/304/64/portrait-human-exposure-model.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
