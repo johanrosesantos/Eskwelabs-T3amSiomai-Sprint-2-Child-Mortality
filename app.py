@@ -9,19 +9,39 @@ import imblearn
 def main():
     custom_css = """
     <style>
-    .stApp {
-        background-color: lightblue;
+    body {
         background-image: url('https://www.unicef.org/philippines/sites/unicef.org.philippines/files/styles/hero_extended/public/UNIPH2019007.jpg.webp?itok=g1HU8cKs');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
     }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        z-index: -1; /* Ensure overlay is behind the content */
+    }
+    .main-content {
+        position: relative;
+        z-index: 1; /* Ensure content is above the overlay */
+        color: white; /* Text color */
+    }
     </style>
     """
-    
-    # Display the custom CSS
+
+    # Display the custom CSS and overlay div
     st.markdown(custom_css, unsafe_allow_html=True)
+    st.markdown('<div class="overlay"></div>', unsafe_allow_html=True)
+    
+    # Add a container div for the main content
+    st.markdown('<div class="main-content">', unsafe_allow_html=True)
+
+
+    
 
     
     st.title(":warning: Child Mortality Risk Prediction")
