@@ -15,9 +15,7 @@ def main():
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: left;
-    }
-    .background-image {
-        transform: scaleX(-1) scaleY(-1);
+       transform: scaleX(-1) scaleY(-1);
     }
     </style>
     """
