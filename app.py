@@ -196,7 +196,7 @@ def main():
     
     ## Mother Information
     st.write("")
-    st.subheader("Mother's Information")
+    st.subheader(":woman_standing: Mother's Information")
 
     ### Mother's age
     mage_mapping = {
