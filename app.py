@@ -10,15 +10,12 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        /* Set background image */
         background-image: url('https://img.freepik.com/free-photo/newborn-baby-hand-white-bed_1150-24920.jpg?w=1380&t=st=1717816974~exp=1717817574~hmac=09a333a2faad521847beb4c48a90bb4a13218dae8d645dc72c3b0a191ed521a4');
-        /* Set background properties */
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: left;
     }
-    /* Apply flip transformation to background image */
     .background-image {
         transform: scaleX(-1) scaleY(-1);
     }
