@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://p1.pxfuel.com/preview/331/493/252/baby-crying-infants-cry.jpg');
+        background-image: url('https://p1.pxfuel.com/preview/609/236/33/baby-feet-hands-father.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
