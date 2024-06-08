@@ -113,7 +113,7 @@ def main():
     st.subheader(":house: Household Information")
     
     rural_mapping = {"Urban Area": 0, "Rural Area": 1}
-    selected_rural = st.selectbox("Where are you located?", ["Urban Area", "Rural Area"], index=0)
+    selected_rural = st.selectbox("Where are you located?", ["Urban Area", "Rural Area"], index=1)
     rural = rural_mapping[selected_rural]
 
     ### Region
@@ -142,7 +142,7 @@ def main():
         "Php76,669-Php219,140": "wealth_richer",
         "more than Php219,140": "wealth_richest"}
     # Display select box for selection
-    selected_wealth = st.selectbox("What is your household's total income?", ["less than Php10,957", "Php10,957-Php43,828", "Php43,828-Php76,669", "Php76,669-Php219,140","more than Php219,140"], index=2)
+    selected_wealth = st.selectbox("What is your household's total income?", ["less than Php10,957", "Php10,957-Php43,828", "Php43,828-Php76,669", "Php76,669-Php219,140","more than Php219,140"], index=0)
     # Assign values based on selection
     for wealth, element in wealth_mapping.items():
         if selected_wealth == wealth:
@@ -238,7 +238,7 @@ def main():
         "Highschool": "mothereduc_secondary",
         "College or Higher": "mothereduc_higher"}
     # Display select box for selection
-    selected_educ = st.selectbox("What is the mother's highest educational attainment?", ["None", "Elementary", "Highschool", "College or Higher"], index=1)
+    selected_educ = st.selectbox("What is the mother's highest educational attainment?", ["None", "Elementary", "Highschool", "College or Higher"], index=0)
     # Assign values based on selection
     for educ, element in educ_mapping.items():
         if selected_educ == educ:
@@ -300,7 +300,7 @@ def main():
 
     # Child sex
     sex_mapping = {"Male": 0, "Female": 1}
-    selected_sex = st.selectbox("Select the child's sex", ["Male", "Female"])
+    selected_sex = st.selectbox("Select the child's sex", ["Male", "Female"], index=0)
     child_sex_female = sex_mapping[selected_sex]
 
     # Child age in months
@@ -330,7 +330,7 @@ def main():
         "Very Small": "childsize_verysmall",
         "Unknown": "childsize_unknown"}
     # Display select box for child size selection
-    selected_childsize = st.selectbox("Select the child's size", ["Larger", "Average", "Smaller", "Very Small", "Unknown"], index=4)
+    selected_childsize = st.selectbox("Select the child's size", ["Larger", "Average", "Smaller", "Very Small", "Unknown"], index=1)
     # Assign values based on selected child size
     for size, element in childsize_mapping.items():
         if selected_childsize == size:
