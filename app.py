@@ -11,7 +11,7 @@ def main():
     custom_css = """
     <style>
     .stApp {
-        background-image: url('https://images.template.net/114972/universal-children-s-day-cartoon-background-iuhhr.jpg');
+        background-image: url('https://media.istockphoto.com/id/482325202/vector/blue-baby-background.jpg?s=2048x2048&w=is&k=20&c=J1RSq0oBTtC__jAzF2ofSOR0OFWYRbnmt2yW_k8b8Yw=');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
