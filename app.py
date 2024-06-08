@@ -279,7 +279,7 @@ def main():
 
     ## Child's Information
     st.write("")
-    st.subheader("Child's Information")
+    st.subheader(":baby: Child's Information")
 
     # Child sex
     sex_mapping = {"Male": 0, "Female": 1}
