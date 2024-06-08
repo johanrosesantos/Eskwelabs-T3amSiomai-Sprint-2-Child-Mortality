@@ -300,7 +300,7 @@ def main():
 
     # Child sex
     sex_mapping = {"Male": 0, "Female": 1}
-    selected_sex = st.selectbox("Select the child's sex", ["Male", "Female"], index=0)
+    selected_sex = st.selectbox("What is the child's sex?", ["Male", "Female"], index=0)
     child_sex_female = sex_mapping[selected_sex]
 
     # Child age in months
@@ -330,7 +330,7 @@ def main():
         "Very Small": "childsize_verysmall",
         "Unknown": "childsize_unknown"}
     # Display select box for child size selection
-    selected_childsize = st.selectbox("Select the child's size", ["Larger", "Average", "Smaller", "Very Small", "Unknown"], index=1)
+    selected_childsize = st.selectbox("What is the child's size during birth?", ["Larger", "Average", "Smaller", "Very Small", "Unknown"], index=1)
     # Assign values based on selected child size
     for size, element in childsize_mapping.items():
         if selected_childsize == size:
